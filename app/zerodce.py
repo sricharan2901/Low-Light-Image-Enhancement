@@ -39,7 +39,7 @@ import random
 import numpy as np
 from glob import glob
 from PIL import Image, ImageOps
-import matplotlib.pyplot as plt
+#import matplotlib.pyplot as plt
 
 import keras
 from keras import layers
@@ -336,7 +336,7 @@ class ZeroDCE(keras.Model):
 zero_dce_model = ZeroDCE()
 zero_dce_model.compile(learning_rate = 1e-4)
 history = zero_dce_model.fit(train_dataset, validation_data = val_dataset, epochs = 100)
-
+"""
 #Function to plot result to show losses during training
 def plot_result(item):
     plt.plot(history.history[item], label = item)
@@ -365,7 +365,7 @@ def plot_results(images, titles, figure_size=(12, 12)):
         _ = plt.imshow(images[i])
         plt.axis("off")
     plt.show()
-
+"""
 
 def infer(original_image):
     image = keras.utils.img_to_array(original_image)
@@ -375,6 +375,7 @@ def infer(original_image):
     output_image = tf.cast((output_image[0, :, :, :] * 255), dtype=np.uint8)
     output_image = Image.fromarray(output_image.numpy())
     return output_image
+"""
 
 for val_image_file in test_low_light_images:
     original_image = Image.open(val_image_file)
@@ -384,6 +385,8 @@ for val_image_file in test_low_light_images:
         ["Original", "MirNet", "ZeroDCE"],
         (20, 12),
     )
+
+
 
 from IPython.display import clear_output
 from PIL import Image, ImageOps
@@ -398,6 +401,7 @@ for image_file in game_of_thrones_images:
         ["Original", "MirNET", "ZeroDCE"],
         (30, 22),
     )
+"""
 
 zero_dce_model.save_weights('/content/drive/MyDrive/zerodce1.h5')
 
@@ -416,7 +420,7 @@ def infer(original_image):
     output_image = tf.cast((output_image[0, :, :, :] * 255), dtype=np.uint8)
     output_image = Image.fromarray(output_image.numpy())
     return output_image
-
+"""
 game_of_thrones_images = glob("./got*.png")
 for image_file in game_of_thrones_images:
     original_image = Image.open(image_file)
@@ -426,3 +430,5 @@ for image_file in game_of_thrones_images:
         ["Original", "MirNET", "ZeroDCE"],
         (30, 22),
     )
+
+"""
