@@ -50,16 +50,18 @@ def show_home():
 
         output_image = zeroimage(original_image)
         st.image(output_image, caption="ZeroDCE", use_column_width=True)
-        
-        #output_image2 = cl.enhance_image(original_image)
-        #st.image(output_image2, caption="CLAHE", use_column_width=True)
-        # Simulating returned images for demonstration
-#        returned_images = [
-#            {"title": "ZeroDCE", "path": "output_image"},
-#            {"title": "NafNet", "path": "path_to_nafnet_image"},
-#            {"title": "CLAHE", "path": "path_to_clahe_image"},
-#            {"title": "Sambhav", "path": "path_to_sambhav_image"}
-#        ]
+
+"""
+        output_image2 = cl.enhance_image(original_image)
+        st.image(output_image2, caption="CLAHE", use_column_width=True)
+        #Simulating returned images for demonstration
+        returned_images = [
+            {"title": "ZeroDCE", "path": "output_image"},
+            {"title": "NafNet", "path": "path_to_nafnet_image"},
+            {"title": "CLAHE", "path": "path_to_clahe_image"},
+            {"title": "Sambhav", "path": "path_to_sambhav_image"}
+        ]
+"""
 
 if __name__ == "__main__":
     main()
