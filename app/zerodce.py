@@ -371,7 +371,7 @@ def plot_results(images, titles, figure_size=(12, 12)):
         _ = plt.imshow(images[i])
         plt.axis("off")
     plt.show()
-"""
+
 
 def infer(original_image):
     image = keras.utils.img_to_array(original_image)
@@ -381,7 +381,7 @@ def infer(original_image):
     output_image = tf.cast((output_image[0, :, :, :] * 255), dtype=np.uint8)
     output_image = Image.fromarray(output_image.numpy())
     return output_image
-"""
+
 
 for val_image_file in test_low_light_images:
     original_image = Image.open(val_image_file)
@@ -408,7 +408,7 @@ for image_file in game_of_thrones_images:
         (30, 22),
     )
 """
-
+"""
 zero_dce_model.save_weights('/content/drive/MyDrive/zerodce1.h5')
 
 from IPython.display import clear_output
@@ -417,7 +417,7 @@ from glob import glob
 
 model = ZeroDCE()
 model.load_weights('/content/drive/MyDrive/zerodce1.h5')
-
+"""
 def infer(original_image):
     image = keras.utils.img_to_array(original_image)
     image = image.astype("float32") / 255.0
