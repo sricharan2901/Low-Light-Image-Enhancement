@@ -1,7 +1,7 @@
 import streamlit as st
 from PIL import Image
 from zerodce import ZeroDCE
-import clahe as cl
+#import clahe as cl
 import tensorflow as tf
 import numpy as np
 import keras
