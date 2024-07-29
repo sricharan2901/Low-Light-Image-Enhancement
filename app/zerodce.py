@@ -49,6 +49,8 @@ IMAGE_SIZE = 256
 MAX_TRAIN_IMAGES = 400
 BATCH_SIZE = 16
 
+"""
+
 #Function to load data from the Dataset to Tensor Decoded format
 def load_data(image_path):
   image = tf.io.read_file(image_path)
@@ -74,6 +76,8 @@ val_dataset = data_generator(val_low_light_images)
 
 print("Training Dataset: ", train_dataset)
 print("Validation Dataset: ", val_dataset)
+
+"""
 
 """Framework for the model"""
 
