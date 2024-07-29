@@ -337,10 +337,12 @@ class ZeroDCE(keras.Model):
 
 """##Training the Model"""
 
+"""
+
 zero_dce_model = ZeroDCE()
 zero_dce_model.compile(learning_rate = 1e-4)
 history = zero_dce_model.fit(train_dataset, validation_data = val_dataset, epochs = 100)
-"""
+
 #Function to plot result to show losses during training
 def plot_result(item):
     plt.plot(history.history[item], label = item)
