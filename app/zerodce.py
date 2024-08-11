@@ -327,12 +327,12 @@ class ZeroDCE(keras.Model):
         )
 
     # Function to load the weights of the dce-net
-    def load_weights(self, filepath, by_name=False, skip_mismatch=False, options=None):
+    def load_weights(self, filepath, by_name=False, skip_mismatch=False):
         self.dce_model.load_weights(
             filepath=filepath,
             by_name=by_name,
             skip_mismatch=skip_mismatch,
-            options=options,
+            #options=options,
         )
 
 """##Training the Model"""
