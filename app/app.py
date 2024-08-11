@@ -35,7 +35,7 @@ def infer(original_image, model):
 
 def zeroimage(original_image):
     model = ZeroDCE()
-    model.load_weights('./zerodce1.h5', False, False, None)
+    model.load_weights('./zerodce1.h5')
     output_image = infer(original_image, model)
     return output_image
 
